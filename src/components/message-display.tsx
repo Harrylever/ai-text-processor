@@ -51,6 +51,7 @@ const MessageDisplay = ({ message }: { message: IMessage }) => {
       setIsSummarizing(true)
       const result = await summarizeContent(message.content)
       console.log(result)
+      setSummarizedMessage(result)
     } catch (error) {
       console.error(error)
     } finally {
